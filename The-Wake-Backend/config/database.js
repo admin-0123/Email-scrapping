@@ -1,6 +1,6 @@
-import path from 'path';
+const path = require('path');
 
-export default ({ env }) => {
+module.exports = ({ env }) => {
   const client = env('DATABASE_CLIENT', 'sqlite');
 
   const connections = {
@@ -53,7 +53,6 @@ export default ({ env }) => {
       connection: {
         filename: path.join(
           __dirname,
-          '..',
           '..',
           env('DATABASE_FILENAME', 'data.db')
         ),
