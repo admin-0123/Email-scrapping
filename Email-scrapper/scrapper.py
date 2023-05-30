@@ -54,7 +54,7 @@ def scrape_emails_and_save_to_csv(num_pages):
     print("Email scraping completed.")
 
 # Specify the number of pages to scrape
-num_pages = 7
+num_pages = 18720
 
 # Start scraping emails and save to CSV
 scrape_emails_and_save_to_csv(num_pages)
