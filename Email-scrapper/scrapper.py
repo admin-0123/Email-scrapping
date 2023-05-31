@@ -16,6 +16,7 @@ def scrape_emails_from_page(page):
     print({decoded_url})
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
+    print({soup})
     scripts = soup.find_all("script", attrs={"type": "application/ld+json"})
 
     emails = []
