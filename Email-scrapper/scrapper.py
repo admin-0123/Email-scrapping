@@ -47,6 +47,7 @@ def scrape_emails_and_save_to_csv(num_pages):
             emails = scrape_emails_from_page(page)
 
             for email in emails:
+                print(f"email: {email}")
                 writer.writerow([email])
 
             print(f"Scraped page {page} of {num_pages}")
