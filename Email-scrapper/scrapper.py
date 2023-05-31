@@ -13,6 +13,7 @@ query_param_value = "cmxXakxKcWNvelMwbko5aFZ3YzdWemtjb0p5MFZ3YmtBRmp2b1RTbXFSOXZ
 def scrape_emails_from_page(page):
     url = base_url + "?" + urllib.parse.urlencode({page_query_param: page, query_param: query_param_value})
     decoded_url = urllib.parse.unquote(url)
+    print({decoded_url})
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
     scripts = soup.find_all("script", attrs={"type": "application/ld+json"})
